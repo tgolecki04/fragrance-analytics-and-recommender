@@ -1,0 +1,7 @@
+---
+title: "analiza"
+format: html
+editor: visual
+---
+
+## analiza

@@ -1,0 +1,8 @@
+---
+title: "Wstęp Teoretyczny"
+author: "Tomasz Golecki"
+format: html
+editor: visual
+---
+
+## plan

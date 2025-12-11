@@ -1,0 +1,8 @@
+---
+title: "Aplikacja"
+author: "Tomasz Golecki"
+format: html
+editor: visual
+---
+
+## aplikacja
