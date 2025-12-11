@@ -1,0 +1,8 @@
+---
+title: "Wnioski"
+author: "Tomasz Golecki"
+format: html
+editor: visual
+---
+
+## wnioski
