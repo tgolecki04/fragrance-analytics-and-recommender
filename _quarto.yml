@@ -1,0 +1,77 @@
+project:
+  type: website
+  output-dir: docs
+  
+language:
+  search-text-placeholder: Szukaj
+  
+website:
+  favicon: images/icons/icon1.png
+  back-to-top-navigation: true
+  search:
+    location: sidebar
+    type: textbox
+  page-footer:
+    center:
+      - text: "© Tomasz Golecki 2025"
+  page-navigation: true
+  navbar:
+    pinned: true
+    left:
+      - text: "STRONA GŁÓWNA"
+        href: index.qmd
+        icon: box-seam
+      - text: "APLIKACJA"
+        href: aplikacja.qmd
+        icon: code-slash
+      - text: "SQL DATABASE"
+        href: aplikacja.qmd
+        icon: code-slash
+      - text: "KONTAKT"
+        href: kontakt.qmd
+        icon: people
+      - text: "DATASET"
+        href: "https://www.kaggle.com/datasets/olgagmiufana1/fragrantica-com-fragrance-dataset"
+        icon: database
+        
+  sidebar:
+    style: "docked"
+    logo: "images/article/logo.png"
+    contents:
+      - text: '<i class="bi bi-dot"></i> Wstęp <i class="bi bi-chat-left-text"></i>'
+        href: index.qmd
+      - text: '<i class="bi bi-dot"></i>Plan Projektu <i class="bi bi-box-seam"></i>'
+        href: plan.qmd
+      - text: '<i class="bi bi-dot"></i>Dane & Analiza <i class="bi bi-clipboard-data"></i>'
+        href: analiza.qmd
+      - text: '<i class="bi bi-dot"></i>Modele <i class="bi bi-cpu"></i>'
+        href: modele.qmd
+      - text: '<i class="bi bi-dot"></i>Wnioski <i class="bi bi-clipboard-check"></i>'
+        href: wnioski.qmd
+      - text: '<i class="bi bi-dot"></i>Zakończenie <i class="bi bi-book"></i>'
+        href: zakonczenie.qmd 
+      - text: '<i class="bi bi-dot"></i>Literatura <i class="bi bi-journal-code"></i>'
+        href: literatura.qmd "
+    
+    
+lang: pl
+format:
+  html:
+    grid:
+      sidebar-width: 20%
+      margin-width: 20%
+    page-layout: full
+    theme:
+      light: flatly
+    fontsize: 16px
+    css: styles/styles.css
+    toc: true
+    toc-title: "Spis treści"
+    toc-depth: 3
+    number-sections: true
+    number-depth: 3
+    code-fold: show
+    code-tools: true
+    code-summary: "Pokaż/Ukryj Kod"
+    smooth-scroll: true
+df-print: kable

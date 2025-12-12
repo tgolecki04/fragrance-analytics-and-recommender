@@ -1,8 +1,31 @@
 ---
-title: "Strona Główna"
-author: "Tomasz Golecki"
-format: html
+warning: false
+number-sections: false
+toc: false
 editor: visual
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+          #quarto-sidebar {
+            margin-top: calc(100vh - 60px);
+          }
+          </style>
 ---
 
-## index
+::: hero-wrapper
+<a id="hero" class="hero-button"> ROZPOCZNIJMY </a>
+
+![](images/article/main1.png){.hero-fullscreen}
+:::
+
+![](images/article/main.jpg){#start fig-align="center"}
+
+tekst
+
+teskt
+
+## tekst 1
+
+## teskt2

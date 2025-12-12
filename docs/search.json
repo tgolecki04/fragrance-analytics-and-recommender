@@ -1,0 +1,81 @@
+[
+  {
+    "objectID": "aplikacja.html",
+    "href": "aplikacja.html",
+    "title": "Aplikacja",
+    "section": "",
+    "text": "zmienna"
+  },
+  {
+    "objectID": "aplikacja.html#aplikacja",
+    "href": "aplikacja.html#aplikacja",
+    "title": "Aplikacja",
+    "section": "",
+    "text": "zmienna"
+  },
+  {
+    "objectID": "baza_danych.html",
+    "href": "baza_danych.html",
+    "title": "Baza Danych - SQL",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "baza_danych.html#quarto",
+    "href": "baza_danych.html#quarto",
+    "title": "Baza Danych - SQL",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "baza_danych.html#running-code",
+    "href": "baza_danych.html#running-code",
+    "title": "Baza Danych - SQL",
+    "section": "2 Running Code",
+    "text": "2 Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nPokaż/Ukryj Kod\n1 + 1\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Kod\ntekst\nteskt",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
+    ]
+  },
+  {
+    "objectID": "index.html#index",
+    "href": "index.html#index",
+    "title": "Strona Główna",
+    "section": "",
+    "text": "ROZPOCZNIJMY \n\n\n\n\n\n\n\ntekst\nteskt",
+    "crumbs": [
+      "Strona Główna",
+      "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
+    ]
+  },
+  {
+    "objectID": "index.html#tekst-1",
+    "href": "index.html#tekst-1",
+    "title": "",
+    "section": "tekst 1",
+    "text": "tekst 1",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
+    ]
+  },
+  {
+    "objectID": "index.html#teskt2",
+    "href": "index.html#teskt2",
+    "title": "",
+    "section": "teskt2",
+    "text": "teskt2",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
+    ]
+  }
+]
