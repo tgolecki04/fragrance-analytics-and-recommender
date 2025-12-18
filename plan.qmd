@@ -1,8 +1,8 @@
 ---
-title: "Wstęp Teoretyczny"
+title: "Plan Projektu"
 author: "Tomasz Golecki"
 format: html
 editor: visual
 ---
 
-## plan
+## Wprowadzenie 

@@ -36,7 +36,7 @@ website:
         
   sidebar:
     style: "docked"
-    logo: "images/article/logo.png"
+    logo: "images/article/logo1.jpg"
     contents:
       - text: '<i class="bi bi-dot"></i> Wstęp <i class="bi bi-chat-left-text"></i>'
         href: index.qmd
@@ -51,7 +51,7 @@ website:
       - text: '<i class="bi bi-dot"></i>Zakończenie <i class="bi bi-book"></i>'
         href: zakonczenie.qmd 
       - text: '<i class="bi bi-dot"></i>Literatura <i class="bi bi-journal-code"></i>'
-        href: literatura.qmd "
+        href: literatura.qmd
     
     
 lang: pl

@@ -37,9 +37,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "",
+    "title": "ML Project",
     "section": "",
-    "text": "Kod\ntekst\nteskt",
+    "text": "START",
     "crumbs": [
       "STRONA GŁÓWNA",
       "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
@@ -76,6 +76,90 @@
     "crumbs": [
       "STRONA GŁÓWNA",
       "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
+    ]
+  },
+  {
+    "objectID": "modele.html",
+    "href": "modele.html",
+    "title": "Modele Uczenia Maszynowego",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Modele <i class=\"bi bi-cpu\"></i>"
+    ]
+  },
+  {
+    "objectID": "modele.html#quarto",
+    "href": "modele.html#quarto",
+    "title": "Modele Uczenia Maszynowego",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Modele <i class=\"bi bi-cpu\"></i>"
+    ]
+  },
+  {
+    "objectID": "modele.html#running-code",
+    "href": "modele.html#running-code",
+    "title": "Modele Uczenia Maszynowego",
+    "section": "2 Running Code",
+    "text": "2 Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nPokaż/Ukryj Kod\n1 + 1\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Modele <i class=\"bi bi-cpu\"></i>"
+    ]
+  },
+  {
+    "objectID": "kontakt.html",
+    "href": "kontakt.html",
+    "title": "Kontakt",
+    "section": "",
+    "text": "kontakt-kontakt\n\n\n\n\n\n Powrót do góry"
+  },
+  {
+    "objectID": "index.html#start",
+    "href": "index.html#start",
+    "title": "ML Project",
+    "section": "Wyjaśnienie Problemu",
+    "text": "Wyjaśnienie Problemu\n\n\n\n\n\nRynek perfum należy do dynamicznie rozwijających się segmentów branży kosmetycznej, łącząc w sobie aspekty ekonomiczne, kulturowe oraz marketingowe. Celem niniejszego projektu jest analiza rynku perfum, ze szczególnym uwzględnieniem jego struktury, głównych trendów, zachowań konsumentów oraz czynników wpływających na popyt i podaż. Praca pozwoli lepiej zrozumieć mechanizmy funkcjonowania rynku perfum oraz wyzwania i możliwości stojące przed producentami i dystrybutorami w warunkach rosnącej konkurencji.\nWspółczesny rynek perfum charakteryzuje się dużą różnorodnością produktów, obejmującą zarówno marki luksusowe, niszowe, jak i masowe. Istotną rolę odgrywa w nim innowacyjność – producenci nieustannie wprowadzają nowe kompozycje zapachowe, formy opakowań oraz strategie komunikacji z klientem. Rosnące znaczenie mają również kwestie związane ze zrównoważonym rozwojem, takie jak ekologiczne składniki, etyczna produkcja czy ograniczanie wpływu na środowisko, które coraz częściej wpływają na decyzje zakupowe konsumentów.\nIstotnym elementem współczesnego rynku perfum są również same marki oraz bogata oferta typów zapachów. Obok globalnych koncernów, takich jak Chanel, Dior czy Gucci, coraz większą popularność zdobywają marki niszowe, które stawiają na unikatowość, wysoką jakość składników oraz artystyczne podejście do tworzenia kompozycji zapachowych. Rynek obejmuje różne typy perfum, m.in. perfumy właściwe, wody perfumowane, wody toaletowe czy kolońskie, które różnią się stężeniem olejków zapachowych i trwałością. Zróżnicowanie to pozwala konsumentom dopasować produkt do indywidualnych preferencji, stylu życia oraz okazji, co dodatkowo zwiększa konkurencyjność i dynamikę całego rynku.\nProjekt ma na celu dokładną analizę rynku perfum, zakłada zbadnie zależności, trendów popularności oraz ceny w czasie. Analiza i wizualizacja przeprowadzona w R ma być połączona ze scrapowaniem danych, wykorzystaniem API, stworzeniem relacyjnej bazy danych MySQL, zbudowaniem modelu uczenia maszynowego opartym na kategoryzacji, a to wszystko w celu połączenia metorycznego opracowania w Quarto Website, zaprezentowania swojej wiedzy i umiejętności oraz zbudowanie aplikacji - Fragrance Recommender, która będzie proponowała nowe pozycje w świecie perfum na podstawie naszych rekomendacji i wcześniejszych zakupów.\nProjekt jest połączeniem data science, relacyjnych baz danych oraz uczenia maszynowego. Celem projektu jest stworzenie aplikacji tzw. polecacza perfum (ang. fragrance recommender), która może być realnym rozwiązaniem i udogodnieniem dla klientów drogerii. Aplikacja te będzie wykorzystywała model uczenia maszynowego, służący do klasyfikacji na podstawie wcześniejszych wyborów klienta. Etap ten będzie poprzedzony etapem analizy rynku pefum i własności z nim związanym. Dodatkowo zbiór danych zostanie rozszerzony przy pomocy API oraz web scrappingu w celu pozyskania danych o cenie w przeszłości o analizie szeregów czasowych. Zwięczenie projektu będzię miało miejsce w Power BI. Projekt ma być połączeniem dotychczasowej wiedzy uzyskanej na studiach o kierunku “Inżynieria i Analiza Danych” na Politechnice Lubelskiej. Dodatkową motywacją jest pasja w świecie danych oraz prywatne zamiłowanie do perfum.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i> Wstęp <i class=\"bi bi-chat-left-text\"></i>"
+    ]
+  },
+  {
+    "objectID": "literatura.html",
+    "href": "literatura.html",
+    "title": "Literatura",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Literatura <i class=\"bi bi-journal-code\"></i>"
+    ]
+  },
+  {
+    "objectID": "literatura.html#quarto",
+    "href": "literatura.html#quarto",
+    "title": "Literatura",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Literatura <i class=\"bi bi-journal-code\"></i>"
+    ]
+  },
+  {
+    "objectID": "literatura.html#running-code",
+    "href": "literatura.html#running-code",
+    "title": "Literatura",
+    "section": "2 Running Code",
+    "text": "2 Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\nPokaż/Ukryj Kod\n1 + 1\n\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Literatura <i class=\"bi bi-journal-code\"></i>"
     ]
   }
 ]

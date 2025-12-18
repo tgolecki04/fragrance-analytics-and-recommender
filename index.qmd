@@ -1,7 +1,8 @@
 ---
+title: "ML Project"
 warning: false
 number-sections: false
-toc: false
+toc: true
 editor: visual
 format:
   html:
@@ -11,21 +12,36 @@ format:
           #quarto-sidebar {
             margin-top: calc(100vh - 60px);
           }
+          
+          #quarto-margin-sidebar{
+            margin-top: calc(100vh - 60px);
+          }
+          #title-block-header{
+            margin-top: calc(100vh - 60px);
+          }
           </style>
 ---
 
 ::: hero-wrapper
-<a id="hero" class="hero-button"> ROZPOCZNIJMY </a>
+<a id="hero" class="hero-button"> START </a>
 
-![](images/article/main1.png){.hero-fullscreen}
+![](images/article/pexels-arts-1187079.jpg){.hero-fullscreen fig-align="center"}
 :::
 
-![](images/article/main.jpg){#start fig-align="center"}
+## Wyjaśnienie Problemu {#start}
 
-tekst
+![](images/article/pexels-bobo-20011541.jpg){fig-align="right" style="float: right; margin: 10px; border-radius: 15px;" width="263"}
 
-teskt
+Rynek perfum należy do dynamicznie rozwijających się segmentów branży kosmetycznej, łącząc w sobie aspekty ekonomiczne, kulturowe oraz marketingowe. Celem niniejszego projektu jest analiza rynku perfum, ze szczególnym uwzględnieniem jego struktury, głównych trendów, zachowań konsumentów oraz czynników wpływających na popyt i podaż. Praca pozwoli lepiej zrozumieć mechanizmy funkcjonowania rynku perfum oraz wyzwania i możliwości stojące przed producentami i dystrybutorami w warunkach rosnącej konkurencji.
 
-## tekst 1
+Współczesny rynek perfum charakteryzuje się dużą różnorodnością produktów, obejmującą zarówno marki luksusowe, niszowe, jak i masowe. Istotną rolę odgrywa w nim innowacyjność – producenci nieustannie wprowadzają nowe kompozycje zapachowe, formy opakowań oraz strategie komunikacji z klientem. Rosnące znaczenie mają również kwestie związane ze zrównoważonym rozwojem, takie jak ekologiczne składniki, etyczna produkcja czy ograniczanie wpływu na środowisko, które coraz częściej wpływają na decyzje zakupowe konsumentów.
 
-## teskt2
+Istotnym elementem współczesnego rynku perfum są również same marki oraz bogata oferta typów zapachów. Obok globalnych koncernów, takich jak Chanel, Dior czy Gucci, coraz większą popularność zdobywają marki niszowe, które stawiają na unikatowość, wysoką jakość składników oraz artystyczne podejście do tworzenia kompozycji zapachowych. Rynek obejmuje różne typy perfum, m.in. perfumy właściwe, wody perfumowane, wody toaletowe czy kolońskie, które różnią się stężeniem olejków zapachowych i trwałością. Zróżnicowanie to pozwala konsumentom dopasować produkt do indywidualnych preferencji, stylu życia oraz okazji, co dodatkowo zwiększa konkurencyjność i dynamikę całego rynku.
+
+Projekt ma na celu dokładną analizę rynku perfum, zakłada zbadnie zależności, trendów popularności oraz ceny w czasie. Analiza i wizualizacja przeprowadzona w R ma być połączona ze scrapowaniem danych, wykorzystaniem API, stworzeniem relacyjnej bazy danych MySQL, zbudowaniem modelu uczenia maszynowego opartym na kategoryzacji, a to wszystko w celu połączenia metorycznego opracowania w Quarto Website, zaprezentowania swojej wiedzy i umiejętności oraz zbudowanie aplikacji - Fragrance Recommender, która będzie proponowała nowe pozycje w świecie perfum na podstawie naszych rekomendacji i wcześniejszych zakupów.
+
+Projekt jest połączeniem data science, relacyjnych baz danych oraz uczenia maszynowego. Celem projektu jest stworzenie aplikacji tzw. polecacza perfum (ang. fragrance recommender), która może być realnym rozwiązaniem i udogodnieniem dla klientów drogerii. Aplikacja te będzie wykorzystywała model uczenia maszynowego, służący do klasyfikacji na podstawie wcześniejszych wyborów klienta. Etap ten będzie poprzedzony etapem analizy rynku pefum i własności z nim związanym. Dodatkowo zbiór danych zostanie rozszerzony przy pomocy API oraz web scrappingu w celu pozyskania danych o cenie w przeszłości o analizie szeregów czasowych. Zwięczenie projektu będzię miało miejsce w Power BI. Projekt ma być połączeniem dotychczasowej wiedzy uzyskanej na studiach o kierunku "Inżynieria i Analiza Danych" na Politechnice Lubelskiej. Dodatkową motywacją jest pasja w świecie danych oraz prywatne zamiłowanie do perfum.
+
+```{=html}
+<script src="javascript/script.js"></script>
+```
