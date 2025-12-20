@@ -1,12 +1,24 @@
-.navbar.navbar-expand-lg {
-  background-color: #2c3e3e !important;
-}
 
 #TOC a {
   color: #2c3e3e !important;
 }
 #TOC a:hover {
   color: #e2846f !important;
+}
+
+#quarto-sidebar {
+  margin-left: 6%;
+}
+
+#quarto-sidebar a {
+  color:  #2c3e3e !important;
+}
+
+#quarto-sidebar a:hover {
+  color: #e2846f !important;
+}
+#quarto-margin-sidebar {
+  position: sticky;
 }
 
 .navbar-nav {
@@ -16,6 +28,9 @@
   z-index: 10;
 }
 
+.navbar.navbar-expand-lg {
+  background-color: #2c3e3e !important;
+}
 .navbar-nav .nav-link {
   margin-left: 6px;
   margin-right: 6px;
@@ -23,21 +38,11 @@
   font-weight: 700;
 }
 
-.navbar-nav .nav-link:hover {
-  transform: scale(1.05);          /* powiększenie */
-  color: #e2846f !important;       /* podświetlenie tekstu */
+.navbar-nav .nav-link {        
+  color: white !important;       /* zmiana koloru tekstu */
 }
-
-#quarto-sidebar {
-  margin-left: 6%;
-}
-
-.sidebar-item:hover {
-  color:pink !important;
-  
-}
-#quarto-margin-sidebar {
-  position: sticky;
+.navbar-nav .nav-link:hover {        
+  color: #e2846f !important;       /* zmiana koloru tekstu */
 }
 
 .sidebar-logo.light-content.py-0.d-lg-inline.d-none {
@@ -45,13 +50,13 @@
 }
 /* HERO IMAGE — pełny ekran */
 .hero-wrapper {
-  position: absolute;   /* NIE fixed — dzięki temu znika po scrollu */
+  position: absolute;   /* absolute - znika po scrolowaniu */
   top: 0px; 
   left: 0px;
   right: 0px;
   width: 100%;
   height: 100vh;
-  z-index: 3;        /* przykrywa sidebar i navbar */
+  z-index: 3;        /* zdjęcie dziei temu jest na górze */
   margin-bottom: 0px;
 }
 
@@ -84,13 +89,13 @@
   font-size: 2rem;
 
   /* nowa czcionka i pogrubienie */
-  font-family: 'Poppins', sans-serif; /* przykładowa nowoczesna czcionka */
-  font-weight: 800;  /* bardzo pogrubiona */
+  font-family: 'Poppins', sans-serif; /* czcionka */
+  font-weight: 800;  /* pogrubiona */
   
   text-decoration: none;
   color: #ffffff; /* biały tekst */
 
-  background: #c72500;; /* lekko przezroczysty fiolet */
+  background: #A9968A;
   border: 3px solid #ffffff;
   border-radius: 12px;
 
@@ -108,3 +113,154 @@
   color: #ffffff; /* pozostaje biały */
 }
 
+/* KONTAKT */
+.container {
+  display: flex;
+  /* Usunięto justify-content: space-between, aby zapobiec "odjeżdżaniu" zdjęcia na skraj */
+  align-items: center; /* Dopasowuje góry kolumn */
+  gap: 20px; /* Dodaje minimalny odstęp między kolumnami, np. 15px */
+}
+
+/* Kolumna listy (30% szerokości) */
+.list-column {
+  flex-basis: 40%; /* Priorytetowa szerokość bazowa */
+  flex-grow: 0;    /* Nie pozwalamy tej kolumnie rosnąć, zachowuje 30% */
+  margin: 0;/* max-width: 500px;  Ograniczenie maksymalnej szerokości listy (opcjonalne) */
+  min-width: 0;    /* Zapewnia poprawne działanie na mniejszych ekranach */
+}
+
+/* Kolumna zdjęcia (70% szerokości) */
+.image-column {
+  flex-basis: 60%; /* Priorytetowa szerokość bazowa */
+  flex-grow: 0;    /* Pozwalamy tej kolumnie rosnąć, aby wypełnić resztę miejsca */
+  text-align: left; /* Obraz będzie wyrównany do lewej strony swojej kolumny */
+}
+
+/* Stylizacja samego obrazu */
+.image-column img {
+  max-width: 100%; /* Obraz nigdy nie wyjdzie poza swoją kolumnę */
+  height: auto;
+  border-radius: 64px; /* Zaokrąglone rogi, jak chciałeś */
+  display: block; /* Poprawia renderowanie obrazu */
+}
+
+/* Wcięcie dla listy nieuporządkowanej */
+ul {
+  padding-left: 20px;
+  margin: 0; /* Opcjonalnie: usuwa domyślny górny margines listy, żeby była równo z górą zdjęcia */
+}
+
+
+/* APLIKACJA  */
+
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column; /* pionowo */
+  align-items: center;    /* poziomo wyśrodkowane wszystkie dzieci */
+  margin-top: 2rem;
+  background-color: #2c3e3e;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border: 1px solid #272626;
+  border-radius: 30px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  column-gap: 4em;
+  row-gap: 1em;
+}
+
+.select-box {
+  position: relative;
+}
+
+.select-box input {
+  width: 100%;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  margin-left: -20px;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  width: 110%;
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.options li {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.options li:hover {
+  background: #f0f0f0;
+}
+
+
+.submit-wrapper {
+  grid-column: 1 / -1; /* zajmuje całą szerokość gridu */
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.submit-wrapper button {
+  padding: 0.7rem 3rem;
+  background: #A9968A;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-wrapper button:hover {
+  background: #e2846f;
+}
+
+.select-box img {
+  display: block;
+  margin: 0 auto 0.8rem auto; /* wyśrodkowanie + odstęp pod obrazkiem */
+  max-width: 250px;
+  margin-left: -20px;
+  height: auto;
+  border-radius: 8px; /* opcjonalnie */
+}
+
+#formMessage {
+  margin-top: 1rem;
+  background-color: #fff;
+  text-align: center;       /* tekst wyśrodkowany */
+  width: 300px;             /* szerokość diva */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* opcjonalnie dla efektu */
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid-form {
+    grid-template-columns: 1fr;
+  }
+}

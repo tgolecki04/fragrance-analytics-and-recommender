@@ -4,14 +4,14 @@
     "href": "aplikacja.html",
     "title": "Aplikacja",
     "section": "",
-    "text": "zmienna"
+    "text": "Opcja A\n        Opcja B\n        Opcja C\n      \n    \n\n    \n      \n      \n      \n        Opcja D\n        Opcja E\n        Opcja F\n      \n    \n\n    \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n    \n      \n      \n      \n        Opcja J\n        Opcja K\n        Opcja L\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n    \n      Wyślij"
   },
   {
     "objectID": "aplikacja.html#aplikacja",
     "href": "aplikacja.html#aplikacja",
     "title": "Aplikacja",
     "section": "",
-    "text": "zmienna"
+    "text": "Email  \n Wiadomość\n\n\n\nWyślij"
   },
   {
     "objectID": "baza_danych.html",
@@ -116,7 +116,7 @@
     "href": "kontakt.html",
     "title": "Kontakt",
     "section": "",
-    "text": "kontakt-kontakt\n\n\n\n\n\n Powrót do góry"
+    "text": "Jestem studentem 3 roku, kierunku Inżynieria i Analiza Danych na Politechnice Lubelskiej. Kierunek ten jest związny bezpośrednio z przedmiotami ścisłymi, gdzie główną i największą część stanowi matematyka ze wszystkimi swoimi dziedzinami. Pierwsze, które przychodzą mi do głowy, i zarazem najcięższe z nich to analiza matematyczna I & II, algebra liniowa, statystyka czy matematyka dyskretna. Największą zaletą tego kierunku jest połączenie logicznego myślenia i praw matematyki z zaawansowaną informatyką i metodami, które są obecnie najnowocześniejszymi algorytmami w dziedzinie pracy z danymi oraz wnioskowania na ich podstawie. Badanie zależności, szukanie i wyjaśnianie ciągów przyczynowo skutkowych, analiza problemów oraz predykcja możliwych zdarzeń to zadania, z którymi mierzę się każdego dnia. Są to jednak problemy wymagające wielu technologii oraz rozwiązań, które umożliwiają, a zarazem znacząco ułatwiają pracę z danymi. Na co dzień wykorzystuję takie technologie i języki programowania jak python, R, SQL, JavaScript, CSS, Quarto, PowerBI, github oraz M365. Wszystko to jest ze sobą połączone statystyką, algebrą, analizą matematyczną i innymi przedmiotami ścisłymi, które miałem okazję poznać studiując na Politechnice Lubelskiej.\n\nPrywatnie interesuję się nowościami świata technologicznego, gdzie najbliżej moim zainteresowaniom jest branża AI, Cloud, Machine Learning oraz Big Data. Z tego właśnie powodu zdecydowałem się na wcześniej wymienione studia. W obecnej chwili staram się połączyć wiedzę zdobytą na uczelni oraz poza nią z realnymi problemami, które można rozwiązać odpowiednio analizując dany problem, szukając rozwiązań, a nastepnie wdrażając je bezpośredno do życia codziennego. Dodatkową motywacją dotyczącą omawianego w trakcie projektu problemu było prywatne zamiłowanie do świata perfum, ponieważ sam wielokrotnie stawałem przed zadaniem wyboru najlepszego zapachu na podstawie wcześniejszych wyborów, lub też znalezienie najkorzystniejszego terminu zakupów tak, aby oferowana cena była jak najniższa.\nJestem zdania, że najlepsze rozwiązania to takie, które rozwiązują realne problemy naszego życia codziennego jednocześnie pamiętając, że wiele zaawansowanych technologii możemy wykorzystać aby uprościć to co na pierwszy rzut oka wydaje się nierozwiązalne."
   },
   {
     "objectID": "index.html#start",
@@ -161,5 +161,33 @@
       "STRONA GŁÓWNA",
       "<i class=\"bi bi-dot\"></i>Literatura <i class=\"bi bi-journal-code\"></i>"
     ]
+  },
+  {
+    "objectID": "kontakt.html#dane-kontaktowe",
+    "href": "kontakt.html#dane-kontaktowe",
+    "title": "Kontakt",
+    "section": "Dane kontaktowe",
+    "text": "Dane kontaktowe\n\n\n\n\n tgolecki04@gmail.com\n\n\n tgolecki04\n\n\n tgolecki04"
+  },
+  {
+    "objectID": "kontakt.html#kilka-informacji-o-mnie",
+    "href": "kontakt.html#kilka-informacji-o-mnie",
+    "title": "Kontakt",
+    "section": "",
+    "text": "Jestem studentem 3 roku, kierunku Inżynieria i Analiza Danych na Politechnice Lubelskiej. Kierunek ten jest związny bezpośrednio z przedmiotami ścisłymi, gdzie główną i największą część stanowi matematyka ze wszystkimi swoimi dziedzinami. Pierwsze, które przychodzą mi do głowy, i zarazem najcięższe z nich to analiza matematyczna I & II, algebra liniowa, statystyka czy matematyka dyskretna. Największą zaletą tego kierunku jest połączenie logicznego myślenia i praw matematyki z zaawansowaną informatyką i metodami, które są obecnie najnowocześniejszymi algorytmami w dziedzinie pracy z danymi oraz wnioskowania na ich podstawie. Badanie zależności, szukanie i wyjaśnianie ciągów przyczynowo skutkowych, analiza problemów oraz predykcja możliwych zdarzeń to zadania, z którymi mierzę się każdego dnia. Są to jednak problemy wymagające wielu technologii oraz rozwiązań, które umożliwiają, a zarazem znacząco ułatwiają pracę z danymi. Na co dzień wykorzystuję takie technologie i języki programowania jak python, R, SQL, JavaScript, CSS, Quarto, PowerBI, github oraz M365. Wszystko to jest ze sobą połączone statystyką, algebrą, analizą matematyczną i innymi przedmiotami ścisłymi, które miałem okazję poznać studiując na Politechnice Lubelskiej.\n\nPrywatnie interesuję się nowościami świata technologicznego, gdzie najbliżej moim zainteresowaniom jest branża AI, Cloud, Machine Learning oraz Big Data. Z tego właśnie powodu zdecydowałem się na wcześniej wymienione studia. W obecnej chwili staram się połączyć wiedzę zdobytą na uczelni oraz poza nią z realnymi problemami, które można rozwiązać odpowiednio analizując dany problem, szukając rozwiązań, a nastepnie wdrażając je bezpośredno do życia codziennego. Dodatkową motywacją dotyczącą omawianego w trakcie projektu problemu było prywatne zamiłowanie do świata perfum, ponieważ sam wielokrotnie stawałem przed zadaniem wyboru najlepszego zapachu na podstawie wcześniejszych wyborów, lub też znalezienie najkorzystniejszego terminu zakupów tak, aby oferowana cena była jak najniższa.\nJestem zdania, że najlepsze rozwiązania to takie, które rozwiązują realne problemy naszego życia codziennego jednocześnie pamiętając, że wiele zaawansowanych technologii możemy wykorzystać aby uprościć to co na pierwszy rzut oka wydaje się nierozwiązalne."
+  },
+  {
+    "objectID": "aplikacja.html#fragrance-recommender",
+    "href": "aplikacja.html#fragrance-recommender",
+    "title": "Aplikacja",
+    "section": "",
+    "text": "Opcja A\n        Opcja B\n        Opcja C\n      \n    \n\n    \n      \n      \n      \n        Opcja D\n        Opcja E\n        Opcja F\n      \n    \n\n    \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n    \n      \n      \n      \n        Opcja J\n        Opcja K\n        Opcja L\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n    \n      Wyślij"
+  },
+  {
+    "objectID": "aplikacja.html#wybierz-parametry",
+    "href": "aplikacja.html#wybierz-parametry",
+    "title": "Aplikacja",
+    "section": "2 Wybierz parametry",
+    "text": "2 Wybierz parametry\n\n\n  \n\n    \n      \n      \n        Opcja A\n        Opcja B\n        Opcja C\n      \n    \n\n    \n      \n      \n        Opcja D\n        Opcja E\n        Opcja F\n      \n    \n\n    \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n    \n      \n      \n        Opcja J\n        Opcja K\n        Opcja L"
   }
 ]

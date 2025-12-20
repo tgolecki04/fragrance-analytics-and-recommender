@@ -1,10 +1,111 @@
 ---
 title: "Aplikacja"
-author: "Tomasz Golecki"
+author: ""
 format: html
 editor: visual
+number-sections: false
 ---
 
-## aplikacja
+## Fragrance Recommender
 
-zmienna
+<div>
+
+```{=html}
+<div class="form-wrapper">
+  <form class="grid-form" id="myForm">
+
+    <div class="select-box">
+      <img src="images//article//aplikacja_formularz.jpg" alt="Opcja 1">
+      <input type="text" placeholder="Wybierz opcję 1">
+      <ul class="options">
+        <li>Opcja A</li>
+        <li>Opcja B</li>
+        <li>Opcja C</li>
+      </ul>
+    </div>
+
+    <div class="select-box">
+      <img src="images//article//aplikacja_formularz_2.jpg" alt="Opcja 2">
+      <input type="text" placeholder="Wybierz opcję 2">
+      <ul class="options">
+        <li>Opcja D</li>
+        <li>Opcja E</li>
+        <li>Opcja F</li>
+      </ul>
+    </div>
+
+    <div class="select-box">
+      <img src="images//article//aplikacja_formularz_3.jpg" alt="Opcja 3">
+      <input type="text" placeholder="Wybierz opcję 3">
+      <ul class="options">
+        <li>Opcja G</li>
+        <li>Opcja H</li>
+        <li>Opcja I</li>
+      </ul>
+    </div>
+
+    <div class="select-box">
+      <img src="images//article//tlo.jpg" alt="Opcja 4">
+      <input type="text" placeholder="Wybierz opcję 4">
+      <ul class="options">
+        <li>Opcja J</li>
+        <li>Opcja K</li>
+        <li>Opcja L</li>
+      </ul>
+    </div>
+
+     <div class="select-box">
+      <img src="images//article//aplikacja_formularz_5.jpg" alt="Opcja 5">
+      <input type="text" placeholder="Wybierz opcję 5">
+      <ul class="options">
+        <li>Opcja G</li>
+        <li>Opcja H</li>
+        <li>Opcja I</li>
+      </ul>
+    </div>
+
+     <div class="select-box">
+      <img src="images//article//aplikacja_formularz_6.jpg" alt="Opcja 6">
+      <input type="text" placeholder="Wybierz opcję 6">
+      <ul class="options">
+        <li>Opcja G</li>
+        <li>Opcja H</li>
+        <li>Opcja I</li>
+      </ul>
+    </div>
+    <div class="submit-wrapper">
+      <button type="button" id="sendBtn">Wyślij</button>
+    </div>
+    <div id="formMessage"></div>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll(".select-box").forEach(box => {
+  const input = box.querySelector("input");
+  const options = box.querySelector(".options");
+
+  input.addEventListener("click", () => {
+    document.querySelectorAll(".options").forEach(o => {
+      if (o !== options) o.style.display = "none";
+    });
+    options.style.display = options.style.display === "block" ? "none" : "block";
+  });
+
+  options.querySelectorAll("li").forEach(option => {
+    option.addEventListener("click", () => {
+      input.value = option.textContent;
+      options.style.display = "none";
+    });
+  });
+  });
+
+  document.getElementById('sendBtn').addEventListener('click', function() {
+  const randomPrediction = Math.random().toFixed(2);
+  document.getElementById('formMessage').innerHTML =
+    "Wynik modelu: " + (randomPrediction*100).toFixed(0) + "%";
+});
+</script>
+```
+
+</div>

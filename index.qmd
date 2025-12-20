@@ -25,7 +25,7 @@ format:
 ::: hero-wrapper
 <a id="hero" class="hero-button"> START </a>
 
-![](images/article/pexels-arts-1187079.jpg){.hero-fullscreen fig-align="center"}
+![](images/article/main.png){.hero-fullscreen fig-align="center"}
 :::
 
 ## Wyjaśnienie Problemu {#start}

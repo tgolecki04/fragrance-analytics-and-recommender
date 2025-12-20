@@ -3,6 +3,37 @@ title: "Kontakt"
 author: "Tomasz Golecki"
 format: html
 editor: visual
+number-sections: false
 ---
 
-kontakt-kontakt
+## Kilka informacji o mnie
+
+![](images/contact/8b4e78f2-793a-4329-8bae-523adc2287d6.jpg){style="float: right; margin: 10px; border-radius: 50px" width="297"}
+
+Jestem studentem 3 roku, kierunku `Inżynieria i Analiza Danych` na `Politechnice Lubelskiej`. Kierunek ten jest związny bezpośrednio z przedmiotami ścisłymi, gdzie główną i największą część stanowi matematyka ze wszystkimi swoimi dziedzinami. Pierwsze, które przychodzą mi do głowy, i zarazem najcięższe z nich to `analiza matematyczna I & II`, `algebra liniowa`, `statystyka` czy `matematyka dyskretna`. Największą zaletą tego kierunku jest połączenie logicznego myślenia i praw matematyki z zaawansowaną informatyką i metodami, które są obecnie najnowocześniejszymi algorytmami w dziedzinie pracy z danymi oraz wnioskowania na ich podstawie. Badanie zależności, szukanie i wyjaśnianie ciągów przyczynowo skutkowych, analiza problemów oraz predykcja możliwych zdarzeń to zadania, z którymi mierzę się każdego dnia. Są to jednak problemy wymagające wielu technologii oraz rozwiązań, które umożliwiają, a zarazem znacząco ułatwiają pracę z danymi. Na co dzień wykorzystuję takie technologie i języki programowania jak `python`, `R`, `SQL`, `JavaScript`, `CSS`, `Quarto`, `PowerBI`, `github` oraz `M365`. Wszystko to jest ze sobą połączone statystyką, algebrą, analizą matematyczną i innymi przedmiotami ścisłymi, które miałem okazję poznać studiując na Politechnice Lubelskiej.
+
+------------------------------------------------------------------------
+
+Prywatnie interesuję się nowościami świata technologicznego, gdzie najbliżej moim zainteresowaniom jest branża `AI`, `Cloud`, `Machine Learning` oraz `Big Data`. Z tego właśnie powodu zdecydowałem się na wcześniej wymienione studia. W obecnej chwili staram się połączyć wiedzę zdobytą na uczelni oraz poza nią z realnymi problemami, które można rozwiązać odpowiednio analizując dany problem, szukając rozwiązań, a nastepnie wdrażając je bezpośredno do życia codziennego. Dodatkową motywacją dotyczącą omawianego w trakcie projektu problemu było prywatne zamiłowanie do świata perfum, ponieważ sam wielokrotnie stawałem przed zadaniem wyboru najlepszego zapachu na podstawie wcześniejszych wyborów, lub też znalezienie najkorzystniejszego terminu zakupów tak, aby oferowana cena była jak najniższa.
+
+Jestem zdania, że najlepsze rozwiązania to takie, które rozwiązują realne problemy naszego życia codziennego jednocześnie pamiętając, że wiele zaawansowanych technologii możemy wykorzystać aby uprościć to co na pierwszy rzut oka wydaje się nierozwiązalne.
+
+## Dane kontaktowe
+
+::::: container
+::: list-column
+<ul>
+
+<li>![](images/svg/email.svg){width="20"} [tgolecki04\@gmail.com](mailto:tgolecki04@gmail.com)</li>
+
+<li>![](images/svg/linkedin.svg){width="20"} [tgolecki04](https://linedin.com/tgolecki04)</li>
+
+<li>![](images/svg/github.svg){width="20"} [tgolecki04](https://github.com/tgolecki04)</li>
+
+</ul>
+:::
+
+::: image-column
+![](images/article/logo_pollub_wmit.jpg){alt="Opis zdjęcia"}
+:::
+:::::
