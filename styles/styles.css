@@ -42,12 +42,28 @@
   color: white !important;       /* zmiana koloru tekstu */
 }
 .navbar-nav .nav-link:hover {        
-  color: #e2846f !important;       /* zmiana koloru tekstu */
+  color: #E79362 !important;       /* zmiana koloru tekstu */
 }
 
 .sidebar-logo.light-content.py-0.d-lg-inline.d-none {
   border-radius: 50px;
 }
+
+.header-section-number {
+  color: #E79362;
+}
+
+.bi {
+  color: #E79362;
+}
+
+.nav-link:active {
+  color: white;
+  background-color: #A9968A;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
 /* HERO IMAGE — pełny ekran */
 .hero-wrapper {
   position: absolute;   /* absolute - znika po scrolowaniu */
@@ -152,115 +168,192 @@ ul {
 
 
 /* APLIKACJA  */
+/* GLOBALNE USTAWIENIA */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+:root {
+  --bg-main: #243333;
+  --bg-card: #2c3e3e;
+  --accent: #a9968a;
+  --accent-hover: #e2846f;
+  --border-soft: rgba(255, 255, 255, 0.15);
+  --text-main: #ffffff;
+  --text-muted: #d6d6d6;
+}
 
+/* WRAPPER */
 .form-wrapper {
   display: flex;
-  flex-direction: column; /* pionowo */
-  align-items: center;    /* poziomo wyśrodkowane wszystkie dzieci */
-  margin-top: 2rem;
-  background-color: #2c3e3e;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  border: 1px solid #272626;
-  border-radius: 30px;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #2f4242, #263535);
+  padding: 2.5em 2em;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  max-width: 700px;
+  margin: auto;
 }
 
+/* GRID */
 .grid-form {
   display: grid;
-  grid-template-columns: repeat(2, 250px);
-  column-gap: 4em;
-  row-gap: 1em;
+  grid-template-columns: repeat(2, 300px);
+  gap: 1.2em 2em;
 }
 
+/* SELECT BOX */
 .select-box {
   position: relative;
-}
-
-.select-box input {
-  width: 100%;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  margin-left: -20px;
-  padding-left: 40px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-  background: #fff;
-}
-
-.options {
-  display: none;
-  position: absolute;
-  top: 110%;
-  width: 110%;
-  max-height: 160px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: white;
-  z-index: 10;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.options li {
-  padding: 0.6rem;
-  cursor: pointer;
-}
-
-.options li:hover {
-  background: #f0f0f0;
-}
-
-
-.submit-wrapper {
-  grid-column: 1 / -1; /* zajmuje całą szerokość gridu */
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.submit-wrapper button {
-  padding: 0.7rem 3rem;
-  background: #A9968A;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.submit-wrapper button:hover {
-  background: #e2846f;
+  text-align: center;
 }
 
 .select-box img {
   display: block;
-  margin: 0 auto 0.8rem auto; /* wyśrodkowanie + odstęp pod obrazkiem */
-  max-width: 250px;
-  margin-left: -20px;
-  height: auto;
-  border-radius: 8px; /* opcjonalnie */
-}
-
-#formMessage {
-  margin-top: 1rem;
-  background-color: #fff;
-  text-align: center;       /* tekst wyśrodkowany */
-  width: 300px;             /* szerokość diva */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 40px;
+  margin: 0 auto 0.6rem;
+  max-width: 220px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* opcjonalnie dla efektu */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* INPUT */
+.select-box input {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+  background: #ffffff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-box input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(169, 150, 138, 0.35);
+}
+
+/* OPTIONS DROPDOWN */
+.options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0.4rem 0;
+  list-style: none;
+  z-index: 10;
+  width: 100%;
+  top: calc(100% + 10px);
+}
+
+.options.active {
+  display: block;
+}
+
+.options li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.options li:hover {
+  background: #f2f2f2;
+}
+
+/* SUBMIT */
+.submit-wrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.submit-wrapper button {
+  padding: 0.75rem 3.2rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(226, 132, 111, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.submit-wrapper button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 13px rgba(226, 132, 111, 0.55);
+}
+
+/* MESSAGE */
+#formMessage {
+  width: 300px;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+/* ZDJĘCIA */
+.select-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.select-card:focus-within {
+  border-color: #a9968a;
+  box-shadow: 0 0 0 3px rgba(169,150,138,0.35);
+}
+
+.select-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.select-card input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.select-card:focus-within {
+  border-color: #a9968a;
+  box-shadow: 0 0 0 3px rgba(169,150,138,0.35);
 }
 
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 600px) {
   .grid-form {
     grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .form-wrapper {
+    padding: 2em 1.2em;
   }
 }
+
+
+

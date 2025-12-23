@@ -1,8 +1,39 @@
 ---
 title: "Plan Projektu"
+subtitle: "Plan"
 author: "Tomasz Golecki"
 format: html
 editor: visual
 ---
 
 ## Wprowadzenie
+
+## Temat
+
+## Cel Projektu
+
+## Omówienie Danych
+
+## Hipotezy Badawcze
+
+## Pytania Badawcze
+
+## Metody i Narzędzia
+
+-   **Przetwarzanie danych**: obsługa braków, ewentualne usunięcie/uzupełnienie, transformacje, normalizacja/standaryzacja zmiennych numerycznych.
+
+<!-- -->
+
+-   **Eksploracyjna analiza danych (EDA)**: statystyki opisowe, rozkłady zmiennych, wykresy.
+
+-   **Wizualizacje**: np. korelacje między zmiennymi, rozkłady cech, porównanie grup.
+
+-   **Modele predykcyjne**: klasyfikacja — regresja logistyczna, drzewa decyzyjne, Random Forest, gradient boosting.
+
+-   **Ocena modeli**: metryki: accuracy, precision, recall, F1-score, AUC-ROC.
+
+## Technologie
+
+Projekt Zakłada pracę przy językach programowania takich jak `R`, `python` oraz `SQL`. Opracowanie analizy, testów statystycznych oraz wizualizacji zostanie wykonane w `R`. `Python` będzie przeznaczony do scrapowania danych, użycia `API` oraz stworzenia modelu uczenia maszynowego. `SQL` będzie odpowiadał za zbudowanie bazy danych oraz dostarczanie ich na linii serwer - użytkownik. Relacyjna baza danych oparta zostanie na technologii `MySQL`. Całość za pomocą merytorki, analizy, opisów i wizualizacji zostanie połączona w `Quarto`, a ostateczny raport powstanie przy użyciu `Power BI`. Dodatkowo podczas całego etapu projektu wykorzystywane będą pliki z rozszerzeniem takim jak: `.css`, `.scss`, `.yml`, `.js`, `.tkl`, `.html`.
+
+## Podsumowanie

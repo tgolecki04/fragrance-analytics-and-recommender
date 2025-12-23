@@ -60,7 +60,6 @@ format:
     grid:
       sidebar-width: 20%
       margin-width: 20%
-    page-layout: full
     theme:
       light: flatly
     fontsize: 16px

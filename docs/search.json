@@ -4,7 +4,7 @@
     "href": "aplikacja.html",
     "title": "Aplikacja",
     "section": "",
-    "text": "Opcja A\n        Opcja B\n        Opcja C\n      \n    \n\n    \n      \n      \n      \n        Opcja D\n        Opcja E\n        Opcja F\n      \n    \n\n    \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n    \n      \n      \n      \n        Opcja J\n        Opcja K\n        Opcja L\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n    \n      Wyślij"
+    "text": "Sprawdź\n    \n  \n  Wynik modelu:"
   },
   {
     "objectID": "aplikacja.html#aplikacja",
@@ -181,7 +181,7 @@
     "href": "aplikacja.html#fragrance-recommender",
     "title": "Aplikacja",
     "section": "",
-    "text": "Opcja A\n        Opcja B\n        Opcja C\n      \n    \n\n    \n      \n      \n      \n        Opcja D\n        Opcja E\n        Opcja F\n      \n    \n\n    \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n    \n      \n      \n      \n        Opcja J\n        Opcja K\n        Opcja L\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n     \n      \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n    \n      Wyślij"
+    "text": "Sprawdź\n    \n  \n  Wynik modelu:"
   },
   {
     "objectID": "aplikacja.html#wybierz-parametry",
@@ -189,5 +189,107 @@
     "title": "Aplikacja",
     "section": "2 Wybierz parametry",
     "text": "2 Wybierz parametry\n\n\n  \n\n    \n      \n      \n        Opcja A\n        Opcja B\n        Opcja C\n      \n    \n\n    \n      \n      \n        Opcja D\n        Opcja E\n        Opcja F\n      \n    \n\n    \n      \n      \n        Opcja G\n        Opcja H\n        Opcja I\n      \n    \n\n    \n      \n      \n        Opcja J\n        Opcja K\n        Opcja L"
+  },
+  {
+    "objectID": "plan.html#temat",
+    "href": "plan.html#temat",
+    "title": "Plan Projektu",
+    "section": "2 Temat",
+    "text": "2 Temat",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#cel-projektu",
+    "href": "plan.html#cel-projektu",
+    "title": "Plan Projektu",
+    "section": "3 Cel Projektu",
+    "text": "3 Cel Projektu",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#omówienie-danych",
+    "href": "plan.html#omówienie-danych",
+    "title": "Plan Projektu",
+    "section": "4 Omówienie Danych",
+    "text": "4 Omówienie Danych",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#hipotezy-badawcze",
+    "href": "plan.html#hipotezy-badawcze",
+    "title": "Plan Projektu",
+    "section": "5 Hipotezy Badawcze",
+    "text": "5 Hipotezy Badawcze",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#pytania-badawcze",
+    "href": "plan.html#pytania-badawcze",
+    "title": "Plan Projektu",
+    "section": "6 Pytania Badawcze",
+    "text": "6 Pytania Badawcze",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#metody-i-narzędzia",
+    "href": "plan.html#metody-i-narzędzia",
+    "title": "Plan Projektu",
+    "section": "7 Metody i Narzędzia",
+    "text": "7 Metody i Narzędzia\n\nPrzetwarzanie danych: obsługa braków, ewentualne usunięcie/uzupełnienie, transformacje, normalizacja/standaryzacja zmiennych numerycznych.\n\n\n\nEksploracyjna analiza danych (EDA): statystyki opisowe, rozkłady zmiennych, wykresy.\nWizualizacje: np. korelacje między zmiennymi, rozkłady cech, porównanie grup.\nModele predykcyjne: klasyfikacja — regresja logistyczna, drzewa decyzyjne, Random Forest, gradient boosting.\nOcena modeli: metryki: accuracy, precision, recall, F1-score, AUC-ROC.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#technologie",
+    "href": "plan.html#technologie",
+    "title": "Plan Projektu",
+    "section": "8 Technologie",
+    "text": "8 Technologie\nProjekt Zakłada pracę przy językach programowania takich jak R, python oraz SQL. Opracowanie analizy, testów statystycznych oraz wizualizacji zostanie wykonane w R. Python będzie przeznaczony do scrapowania danych, użycia API oraz stworzenia modelu uczenia maszynowego. SQL będzie odpowiadał za zbudowanie bazy danych oraz dostarczanie ich na linii serwer - użytkownik. Relacyjna baza danych oparta zostanie na technologii MySQL. Całość za pomocą merytorki, analizy, opisów i wizualizacji zostanie połączona w Quarto, a ostateczny raport powstanie przy użyciu Power BI. Dodatkowo podczas całego etapu projektu wykorzystywane będą pliki z rozszerzeniem takim jak: .css, .scss, .yml, .js, .tkl, .html.",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "plan.html#podsumowanie",
+    "href": "plan.html#podsumowanie",
+    "title": "Plan Projektu",
+    "section": "9 Podsumowanie",
+    "text": "9 Podsumowanie",
+    "crumbs": [
+      "STRONA GŁÓWNA",
+      "<i class=\"bi bi-dot\"></i>Plan Projektu <i class=\"bi bi-box-seam\"></i>"
+    ]
+  },
+  {
+    "objectID": "data/cleaning.html",
+    "href": "data/cleaning.html",
+    "title": "data_clean",
+    "section": "",
+    "text": "Pokaż/Ukryj Kod\nlibrary(kableExtra)\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter()     masks stats::filter()\n✖ dplyr::group_rows() masks kableExtra::group_rows()\n✖ dplyr::lag()        masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nPokaż/Ukryj Kod\nlibrary(dplyr)\n\ndane &lt;- read.csv2(\"fra_cleaned.csv\") %&gt;%\n  mutate(\n    across(c(Rating.Value, Rating.Count, Year), as.numeric),\n    across(starts_with(\"mainaccord\"), ~ na_if(.x, \"\"))\n  ) %&gt;%\n  arrange(-Rating.Count) %&gt;%     # sortowanie po Rating.Count rosnąco\n  slice_head(n = 100) %&gt;%\n  select(-Perfumer1, -Perfumer2) |&gt; \n  na.omit() |&gt; \n  rename(\n    rating_value = 'Rating.Value',\n    rating_count = 'Rating.Count'\n  )\n  \nwrite.table(dane, \"data.csv\",\n            sep = \";\",\n            row.names = FALSE,\n            col.names = TRUE,\n            quote = FALSE)"
+  },
+  {
+    "objectID": "data/cleaning.html#załadowanie-danych",
+    "href": "data/cleaning.html#załadowanie-danych",
+    "title": "data_clean",
+    "section": "",
+    "text": "Pokaż/Ukryj Kod\nlibrary(kableExtra)\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter()     masks stats::filter()\n✖ dplyr::group_rows() masks kableExtra::group_rows()\n✖ dplyr::lag()        masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nPokaż/Ukryj Kod\nlibrary(dplyr)\n\ndane &lt;- read.csv2(\"fra_cleaned.csv\") %&gt;%\n  mutate(\n    across(c(Rating.Value, Rating.Count, Year), as.numeric),\n    across(starts_with(\"mainaccord\"), ~ na_if(.x, \"\"))\n  ) %&gt;%\n  arrange(-Rating.Count) %&gt;%     # sortowanie po Rating.Count rosnąco\n  slice_head(n = 100) %&gt;%\n  select(-Perfumer1, -Perfumer2) |&gt; \n  na.omit() |&gt; \n  rename(\n    rating_value = 'Rating.Value',\n    rating_count = 'Rating.Count'\n  )\n  \nwrite.table(dane, \"data.csv\",\n            sep = \";\",\n            row.names = FALSE,\n            col.names = TRUE,\n            quote = FALSE)"
   }
 ]

@@ -1,0 +1,34 @@
+---
+title: "data_clean"
+format: html
+editor: visual
+---
+
+## Załadowanie danych
+
+```{r}
+library(kableExtra)
+library(tidyverse)
+library(dplyr)
+
+dane <- read.csv2("fra_cleaned.csv") %>%
+  mutate(
+    across(c(Rating.Value, Rating.Count, Year), as.numeric),
+    across(starts_with("mainaccord"), ~ na_if(.x, ""))
+  ) %>%
+  arrange(-Rating.Count) %>%     # sortowanie po Rating.Count rosnąco
+  slice_head(n = 100) %>%
+  select(-Perfumer1, -Perfumer2) |> 
+  na.omit() |> 
+  rename(
+    rating_value = 'Rating.Value',
+    rating_count = 'Rating.Count'
+  )
+  
+write.table(dane, "data.csv",
+            sep = ";",
+            row.names = FALSE,
+            col.names = TRUE,
+            quote = FALSE)
+
+```

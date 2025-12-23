@@ -15,96 +15,190 @@ number-sections: false
   <form class="grid-form" id="myForm">
 
     <div class="select-box">
-      <img src="images//article//aplikacja_formularz.jpg" alt="Opcja 1">
-      <input type="text" placeholder="Wybierz opcję 1">
+      <div class="select-card">
+        <img src="images//article//aplikacja_formularz.jpg" alt="Opcja 1">
+        <input
+          type="text"
+          placeholder="Wybierz perfumy"
+          autocomplete="off"
+          name="wybor_1">
+      </div>
       <ul class="options">
-        <li>Opcja A</li>
-        <li>Opcja B</li>
-        <li>Opcja C</li>
       </ul>
     </div>
 
     <div class="select-box">
-      <img src="images//article//aplikacja_formularz_2.jpg" alt="Opcja 2">
-      <input type="text" placeholder="Wybierz opcję 2">
+      <div class="select-card">
+        <img src="images//article//aplikacja_formularz_2.jpg" alt="Opcja 2">
+        <input 
+          type="text"
+          placeholder="Wybierz perfumy"
+          autocomplete="off"
+          name="wybor_2">
+      </div>
       <ul class="options">
-        <li>Opcja D</li>
-        <li>Opcja E</li>
-        <li>Opcja F</li>
       </ul>
     </div>
 
     <div class="select-box">
-      <img src="images//article//aplikacja_formularz_3.jpg" alt="Opcja 3">
-      <input type="text" placeholder="Wybierz opcję 3">
-      <ul class="options">
-        <li>Opcja G</li>
-        <li>Opcja H</li>
-        <li>Opcja I</li>
+      <div class="select-card">
+        <img src="images//article//aplikacja_formularz_3.jpg" alt="Opcja 3">
+        <input
+          type="text"
+          placeholder="Wybierz perfumy"
+          autocomplete="off"
+          name="wybor_3">
+      </div>
+      <ul class="options"
       </ul>
     </div>
 
     <div class="select-box">
-      <img src="images//article//tlo.jpg" alt="Opcja 4">
-      <input type="text" placeholder="Wybierz opcję 4">
+      <div class="select-card">
+        <img src="images//article//tlo.jpg" alt="Opcja 4">
+        <input
+          type="text"
+          placeholder="Wybierz perfumy"
+          autocomplete="off"
+          name="wybor_4">
+      </div>
       <ul class="options">
-        <li>Opcja J</li>
-        <li>Opcja K</li>
-        <li>Opcja L</li>
       </ul>
     </div>
 
      <div class="select-box">
-      <img src="images//article//aplikacja_formularz_5.jpg" alt="Opcja 5">
-      <input type="text" placeholder="Wybierz opcję 5">
+      <div class="select-card">
+        <img src="images//article//aplikacja_formularz_5.jpg" alt="Opcja 5">
+        <input
+          type="text"
+          placeholder="Wybierz perfumy"
+          autocomplete="off"
+          name="wybor_5">
+      </div>
       <ul class="options">
-        <li>Opcja G</li>
-        <li>Opcja H</li>
-        <li>Opcja I</li>
       </ul>
     </div>
 
      <div class="select-box">
-      <img src="images//article//aplikacja_formularz_6.jpg" alt="Opcja 6">
-      <input type="text" placeholder="Wybierz opcję 6">
+      <div class="select-card">
+        <img src="images//article//aplikacja_formularz_6.jpg" alt="Opcja 6">
+        <input
+          type="text"
+          placeholder="Wybierz perfumy"
+          autocomplete="off"
+          name="wybor_6">
+      </div>
       <ul class="options">
-        <li>Opcja G</li>
-        <li>Opcja H</li>
-        <li>Opcja I</li>
+
       </ul>
     </div>
     <div class="submit-wrapper">
-      <button type="button" id="sendBtn">Wyślij</button>
+      <button type="button" id="sendBtn">Sprawdź</button>
     </div>
-    <div id="formMessage"></div>
   </form>
+  <div id="formMessage">Wynik modelu:</div>
 </div>
 
 <script>
-  document.querySelectorAll(".select-box").forEach(box => {
-  const input = box.querySelector("input");
-  const options = box.querySelector(".options");
-
-  input.addEventListener("click", () => {
-    document.querySelectorAll(".options").forEach(o => {
-      if (o !== options) o.style.display = "none";
-    });
-    options.style.display = options.style.display === "block" ? "none" : "block";
-  });
-
-  options.querySelectorAll("li").forEach(option => {
-    option.addEventListener("click", () => {
-      input.value = option.textContent;
-      options.style.display = "none";
-    });
-  });
-  });
-
   document.getElementById('sendBtn').addEventListener('click', function() {
   const randomPrediction = Math.random().toFixed(2);
   document.getElementById('formMessage').innerHTML =
     "Wynik modelu: " + (randomPrediction*100).toFixed(0) + "%";
 });
+
+const words = [
+  "Dior Sauvage",
+  "Bleu de Chanel",
+  "Creed Aventus",
+  "Acqua di Gio Profumo",
+  "Paco Rabanne 1 Million",
+  "Versace Eros",
+  "Hugo Boss The Scent",
+  "Yves Saint Laurent Y",
+  "Tom Ford Tobacco Vanille",
+  "Jean Paul Gaultier Le Male",
+  "Azzaro The Most Wanted",
+  "Terre d'Hermès",
+  "Davidoff Cool Water",
+  "Mont Blanc Explorer",
+  "Prada Luna Rossa",
+  "Givenchy Gentleman",
+  "Calvin Klein CK One",
+  "Armani Code",
+  "Invictus by Paco Rabanne",
+  "Issey Miyake L'Eau d'Issey"
+];
+
+document.querySelectorAll('.select-box').forEach(selectBox => {
+  const input = selectBox.querySelector('input');
+  const options = selectBox.querySelector('.options');
+
+  input.addEventListener('input', () => {
+    const value = input.value.toLowerCase();
+    options.innerHTML = '';
+
+    if (!value) {
+      options.classList.remove('active');
+      return;
+    }
+
+    const matches = words.filter(word =>
+      word.toLowerCase().includes(value)
+    );
+
+    if (!matches.length) {
+      options.classList.remove('active');
+      return;
+    }
+
+    matches.forEach(word => {
+      const li = document.createElement('li');
+      li.textContent = word;
+
+      li.addEventListener('click', () => {
+        input.value = word;
+        options.classList.remove('active');
+      });
+
+      options.appendChild(li);
+    });
+
+    options.classList.add('active');
+  });
+});
+
+document.getElementById('sendBtn').addEventListener('click', () => {
+  const inputs = document.querySelectorAll('.select-card input');
+  const data = {};
+
+  inputs.forEach((input, index) => {
+    const key = input.name || `pole_${index + 1}`;
+    data[key] = input.value.trim();
+  });
+
+  generateCSV(data);
+});
+
+
+function generateCSV(data) {
+  const headers = Object.keys(data).join(',');
+  const values = Object.values(data)
+    .map(value => `"${value.replace(/"/g, '""')}"`)
+    .join(',');
+
+  const csvContent = `${headers}\n${values}`;
+
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'formularz_perfumy.csv';
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
 </script>
 ```
 
