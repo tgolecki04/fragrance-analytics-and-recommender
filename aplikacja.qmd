@@ -22,7 +22,7 @@ number-sections: false
           type="text"
           placeholder="Wybierz perfumy"
           autocomplete="off"
-          name="wybor_1">
+          id="input_1">
         <ul class="options">
         </ul>
       </div>
@@ -36,7 +36,7 @@ number-sections: false
           type="text"
           placeholder="Wybierz perfumy"
           autocomplete="off"
-          name="wybor_2">
+          id="input_2">
         <ul class="options">
         </ul>
       </div>
@@ -50,7 +50,7 @@ number-sections: false
           type="text"
           placeholder="Wybierz perfumy"
           autocomplete="off"
-          name="wybor_3">
+          id="input_3">
         <ul class="options"
         </ul>
       </div>
@@ -64,7 +64,7 @@ number-sections: false
           type="text"
           placeholder="Wybierz perfumy"
           autocomplete="off"
-          name="wybor_4">
+          id="input_4">
         <ul class="options">
         </ul>
       </div>
@@ -78,7 +78,7 @@ number-sections: false
           type="text"
           placeholder="Wybierz perfumy"
           autocomplete="off"
-          name="wybor_5">
+          id="input_5">
         <ul class="options">
         </ul>
       </div>
@@ -92,7 +92,7 @@ number-sections: false
           type="text"
           placeholder="Wybierz perfumy"
           autocomplete="off"
-          name="wybor_6">
+          id="input_6">
         <ul class="options">
         </ul>
       </div>
@@ -105,11 +105,6 @@ number-sections: false
 </div>
 
 <script>
-  document.getElementById('sendBtn').addEventListener('click', function() {
-  const randomPrediction = Math.random().toFixed(2);
-  document.getElementById('formMessage').innerHTML =
-    "Wynik modelu: " + (randomPrediction*100).toFixed(0) + "%";
-});
 
 /* ZAAWANOSOWANE AUTOUZUPELNIANIE Z DB */
 document.querySelectorAll(".select-card").forEach(card => {
@@ -153,6 +148,32 @@ document.querySelectorAll(".select-card").forEach(card => {
   });
 });
 
+// Uruchomienie przycisku & zapis do bazy danych wprowadoznych informajci
+document.getElementById("sendBtn").addEventListener("click", async () => {
+
+  const data = {
+    input_1: document.getElementById("input_1").value,
+    input_2: document.getElementById("input_2").value,
+    input_3: document.getElementById("input_3").value,
+    input_4: document.getElementById("input_4").value,
+    input_5: document.getElementById("input_5").value,
+    input_6: document.getElementById("input_6").value
+  };
+
+  console.log("Wysyłam:", data); // 🔍 DEBUG
+
+  const response = await fetch("http://localhost:3000/save", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  alert(await response.text());
+  
+  const response_python = await fetch("http://localhost:3000/random");
+  const value = await response_python.text();
+  document.getElementById("formMessage").textContent = "Najlepszy wybór: " + value;
+});
 </script>
 ```
 
