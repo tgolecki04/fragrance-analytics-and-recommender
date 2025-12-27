@@ -28,5 +28,7 @@ Projekt Zakłada pracę przy językach programowania takich jak R, python oraz S
 
 **Zachęcam do zapoznania się z projektem oraz śledzenia dalszych postępów tego projektu, jak i innych tworzonych przeze mnie.**
 
+❗This project is for educational and research purposes only. No scraped data is included in this repository.
+
 
 
