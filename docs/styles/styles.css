@@ -167,7 +167,7 @@ ul {
 }
 
 
-/* APLIKACJA  */
+
 /* APLIKACJA  */
 /* GLOBALNE USTAWIENIA */
 *,
@@ -223,7 +223,7 @@ ul {
 /* INPUT */
 .select-box input {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 3rem;
   border-radius: 10px;
   border: 1px solid var(--border-soft);
   background: #ffffff;
@@ -242,6 +242,8 @@ ul {
 .options {
   display: none;
   position: absolute;
+  left: 0;
+  right: 0;
   width: 100%;
   background: #fff;
   border-radius: 14px;

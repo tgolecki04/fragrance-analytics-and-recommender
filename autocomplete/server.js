@@ -31,15 +31,18 @@ app.get("/autocomplete", (req, res) => {
   }
 
   const sql = `
-    SELECT DISTINCT Perfume
-    FROM fragrances
+    SELECT DISTINCT Perfume, address_img
+    FROM men_fragrances
     WHERE LOWER(Perfume) LIKE ?
     LIMIT 5;
   `;
 
-  db.query(sql, [q + "%"], (err, results) => {
-    if (err) return res.status(500).json(err);
-    res.json(results.map(r => r.Perfume));
+   db.query(sql, [q.toLowerCase() + "%"], (err, results) => {
+    if (err) {
+      return res.status(500).json(err);
+    }
+
+    res.json(results);
   });
 });
 

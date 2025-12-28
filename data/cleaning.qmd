@@ -16,19 +16,66 @@ dane <- read.csv2("fra_cleaned.csv") %>%
     across(c(Rating.Value, Rating.Count, Year), as.numeric),
     across(starts_with("mainaccord"), ~ na_if(.x, ""))
   ) %>%
-  arrange(-Rating.Count) %>%     # sortowanie po Rating.Count rosnąco
-  slice_head(n = 100) %>%
   select(-Perfumer1, -Perfumer2) |> 
   na.omit() |> 
   rename(
     rating_value = 'Rating.Value',
     rating_count = 'Rating.Count'
-  )
+  ) |> 
+  mutate(rating_value = rating_count / (rating_count + 200) * rating_value + 200 / (rating_count + 200) * mean(rating_value))
+
+# Tworzenie kolumny z adresami zdjęć
+https_base <- "https://fimgs.net/mdimg/perfume-thumbs/375x500."
+
+dane$address_img <- sapply(dane$url, function(u) {
+  sub(".*-(\\d+)\\.html$", "\\1", u)
+})
+
+
+# tworzymy pełny URL obrazka
+dane$address_img <- paste0(https_base, dane$address_img, ".2x.avif")
+
+
+
+men_fragrances <- dane |> 
+  subset(Gender == "men") |> 
+  arrange(-rating_value)     # sortowanie po Rating.Count rosnąco
   
-write.table(dane, "data.csv",
-            sep = ";",
-            row.names = FALSE,
-            col.names = TRUE,
-            quote = FALSE)
+
+women_fragrances <- dane |> 
+  subset(Gender == "women") |> 
+  arrange(-rating_value) 
+
+unisex_fragrances <- dane |> 
+  subset(Gender == "unisex") |> 
+  arrange(-rating_value) 
+
+write.table(
+  men_fragrances,
+  "men_fragrances.csv",
+  sep = ";",
+  row.names = FALSE,
+  col.names = TRUE,
+  quote = FALSE
+)
+
+write.table(
+  women_fragrances,
+  "women_fragrances.csv",
+  sep = ";",
+  row.names = FALSE,
+  col.names = TRUE,
+  quote = FALSE
+)
+
+write.table(
+  unisex_fragrances,
+  "unisex_fragrances.csv",
+  sep = ";",
+  row.names = FALSE,
+  col.names = TRUE,
+  quote = FALSE
+)
+
 
 ```

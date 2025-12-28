@@ -16,7 +16,11 @@ number-sections: false
 
     <div class="select-box">
       <div class="select-card">
-        <img src="images//article//aplikacja_formularz.jpg" alt="Opcja 1">
+        <img
+          src="images//article//aplikacja_formularz.jpg"
+          alt="Opcja 1"
+          class="perfume-img"
+          >
         <input
           class="autocomplete"
           type="text"
@@ -107,46 +111,90 @@ number-sections: false
 <script>
 
 /* ZAAWANOSOWANE AUTOUZUPELNIANIE Z DB */
-document.querySelectorAll(".select-card").forEach(card => {
-  const input = card.querySelector("input");
-  const list = card.querySelector(".options");
+document.addEventListener("DOMContentLoaded", () => {
 
-  input.addEventListener("input", async () => {
-    const query = input.value;
-  
-    if (query.length < 2) {
-      list.innerHTML = "";
-      list.classList.remove("active"); // ukryj listę jeśli za mało znaków
-      return;
-    }
-  
-    const res = await fetch(`http://localhost:3000/autocomplete?q=${query}`);
-    const data = await res.json();
-  
-    list.innerHTML = "";
-  
-    if (data.length === 0) {
-      list.classList.remove("active"); // brak wyników → ukryj
-      return;
-    }
-  
-    data.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item;
-  
-      li.addEventListener("click", () => {
-        input.value = item;
-        list.innerHTML = "";
-        list.classList.remove("active"); // kliknięcie → ukryj
-      });
-  
-      list.appendChild(li);
+  const AUTOCOMPLETE_URL = "http://localhost:3000/autocomplete";
+  const PLACEHOLDER_IMG = "images/article/aplikacja_formularz.jpg";
+
+  document.querySelectorAll(".select-box").forEach(box => {
+
+    const input = box.querySelector(".autocomplete");
+    const options = box.querySelector(".options");
+    const image = box.querySelector("img");
+
+    let controller = null;
+
+    input.addEventListener("input", async () => {
+      const query = input.value.trim();
+
+      if (query.length < 2) {
+        options.innerHTML = "";
+        options.classList.remove("active");
+        return;
+      }
+
+      // przerwij poprzednie zapytanie
+      if (controller) controller.abort();
+      controller = new AbortController();
+
+      try {
+        const res = await fetch(
+          `${AUTOCOMPLETE_URL}?q=${encodeURIComponent(query)}`,
+          { signal: controller.signal }
+        );
+
+        const data = await res.json();
+
+        options.innerHTML = "";
+        options.classList.add("active");
+
+        data.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item.Perfume;
+
+          li.addEventListener("click", () => {
+            input.value = item.Perfume;
+            image.src = item.address_img || PLACEHOLDER_IMG;
+            options.classList.remove("active");
+          });
+
+          options.appendChild(li);
+        });
+
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error("Autocomplete error:", err);
+        }
+      }
     });
 
-  list.classList.add("active"); // pokaż listę
-  
+    // klik poza pole → zamknij dropdown
+    document.addEventListener("click", e => {
+      if (!box.contains(e.target)) {
+        options.classList.remove("active");
+      }
+    });
+
   });
+
+  // 🔹 przycisk "Sprawdź"
+  document.getElementById("sendBtn").addEventListener("click", () => {
+    const values = [];
+
+    document.querySelectorAll(".autocomplete").forEach(input => {
+      values.push(input.value.trim());
+    });
+
+    console.log("Wybrane perfumy:", values);
+
+    // tu w przyszłości:
+    // fetch do backendu / model ML / Python
+    document.getElementById("formMessage").textContent =
+      "Wynik modelu: " + values.filter(v => v).join(", ");
+  });
+
 });
+
 
 // Uruchomienie przycisku & zapis do bazy danych wprowadoznych informajci
 document.getElementById("sendBtn").addEventListener("click", async () => {
