@@ -18,7 +18,7 @@
     "href": "baza_danych.html",
     "title": "Baza Danych - SQL",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+    "text": "MySQL jest jednym z najpopularniejszych systemów zarządzania relacyjnymi bazami danych (RDBMS). System ten pozwala przechowywać liczne informacje w tabelach, w kolumnach i wierszach, a następnie szybko je wyszukiwać, przetwarzać i dokonywać na nich operacji. MySQL jest bardzo wydajny, stabilny i darmowy w wersji Community, dlatego jest szeroko stosowany w projektach webowych oraz umożliwia tworzyć zaawansowane systemy baz danych od samego początku korzystania z niego.\nSQL (Structured Query Language) to język używany do komunikacji z bazą danych. Dzięki SQL możemy:\n\ntworzyć i modyfikować tabele,\nwykonywać zapytania do bazy w celu pobrania potrzebnych danych,\ndodawać, aktualizować i usuwać rekordy,\nłączyć dane z różnych tabel, generować raporty i przesyłać dane do dalszej pracy.\n\nMySQL Workbench to narzędzie typu GUI (graficzny interfejs użytkownika), które ułatwia pracę z MySQL. Dzięki niemu można:\n\nwizualnie projektować bazę danych, włącznie z jej podzespołami,\npisać i uruchamiać zapytania SQL w edytorze,\nanalizować strukturę i zależności w bazie za pomocą diagramów,\nzarządzać użytkownikami, uprawnieniami oraz bezpieczeństwem całej bazy danych.\n\nWorkbech jest szczególnie przydatny dla osób, które chcą zacząć przygodę w systemach bazodanowych oraz nauczyć się zarządzania strukturą całej bazy bez konieczności pisania wielu komend SQL, używajać wbudowanych operacji i procedur."
   },
   {
     "objectID": "baza_danych.html#quarto",
@@ -291,5 +291,54 @@
     "title": "data_clean",
     "section": "",
     "text": "Pokaż/Ukryj Kod\nlibrary(kableExtra)\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.6\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.1     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.2.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter()     masks stats::filter()\n✖ dplyr::group_rows() masks kableExtra::group_rows()\n✖ dplyr::lag()        masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nPokaż/Ukryj Kod\nlibrary(dplyr)\n\ndane &lt;- read.csv2(\"fra_cleaned.csv\") %&gt;%\n  mutate(\n    across(c(Rating.Value, Rating.Count, Year), as.numeric),\n    across(starts_with(\"mainaccord\"), ~ na_if(.x, \"\"))\n  ) %&gt;%\n  select(-Perfumer1, -Perfumer2) |&gt; \n  na.omit() |&gt; \n  rename(\n    rating_value = 'Rating.Value',\n    rating_count = 'Rating.Count'\n  ) |&gt; \n  mutate(rating_value = rating_count / (rating_count + 200) * rating_value + 200 / (rating_count + 200) * mean(rating_value))\n\n# Tworzenie kolumny z adresami zdjęć\nhttps_base &lt;- \"https://fimgs.net/mdimg/perfume-thumbs/375x500.\"\n\ndane$address_img &lt;- sapply(dane$url, function(u) {\n  sub(\".*-(\\\\d+)\\\\.html$\", \"\\\\1\", u)\n})\n\n\n# tworzymy pełny URL obrazka\ndane$address_img &lt;- paste0(https_base, dane$address_img, \".2x.avif\")\n\n\n\nmen_fragrances &lt;- dane |&gt; \n  subset(Gender == \"men\") |&gt; \n  arrange(-rating_value)     # sortowanie po Rating.Count rosnąco\n  \n\nwomen_fragrances &lt;- dane |&gt; \n  subset(Gender == \"women\") |&gt; \n  arrange(-rating_value) \n\nunisex_fragrances &lt;- dane |&gt; \n  subset(Gender == \"unisex\") |&gt; \n  arrange(-rating_value) \n\nwrite.table(\n  men_fragrances,\n  \"men_fragrances.csv\",\n  sep = \";\",\n  row.names = FALSE,\n  col.names = TRUE,\n  quote = FALSE\n)\n\nwrite.table(\n  women_fragrances,\n  \"women_fragrances.csv\",\n  sep = \";\",\n  row.names = FALSE,\n  col.names = TRUE,\n  quote = FALSE\n)\n\nwrite.table(\n  unisex_fragrances,\n  \"unisex_fragrances.csv\",\n  sep = \";\",\n  row.names = FALSE,\n  col.names = TRUE,\n  quote = FALSE\n)"
+  },
+  {
+    "objectID": "baza_danych.html#wprowadzenie-do-mysql-oraz-workbench",
+    "href": "baza_danych.html#wprowadzenie-do-mysql-oraz-workbench",
+    "title": "Baza Danych - SQL",
+    "section": "",
+    "text": "MySQL jest jednym z najpopularniejszych systemów zarządzania relacyjnymi bazami danych (RDBMS). System ten pozwala przechowywać liczne informacje w tabelach, w kolumnach i wierszach, a następnie szybko je wyszukiwać, przetwarzać i dokonywać na nich operacji. MySQL jest bardzo wydajny, stabilny i darmowy w wersji Community, dlatego jest szeroko stosowany w projektach webowych oraz umożliwia tworzyć zaawansowane systemy baz danych od samego początku korzystania z niego.\nSQL (Structured Query Language) to język używany do komunikacji z bazą danych. Dzięki SQL możemy:\n\ntworzyć i modyfikować tabele,\nwykonywać zapytania do bazy w celu pobrania potrzebnych danych,\ndodawać, aktualizować i usuwać rekordy,\nłączyć dane z różnych tabel, generować raporty i przesyłać dane do dalszej pracy.\n\nMySQL Workbench to narzędzie typu GUI (graficzny interfejs użytkownika), które ułatwia pracę z MySQL. Dzięki niemu można:\n\nwizualnie projektować bazę danych, włącznie z jej podzespołami,\npisać i uruchamiać zapytania SQL w edytorze,\nanalizować strukturę i zależności w bazie za pomocą diagramów,\nzarządzać użytkownikami, uprawnieniami oraz bezpieczeństwem całej bazy danych.\n\nWorkbech jest szczególnie przydatny dla osób, które chcą zacząć przygodę w systemach bazodanowych oraz nauczyć się zarządzania strukturą całej bazy bez konieczności pisania wielu komend SQL, używajać wbudowanych operacji i procedur."
+  },
+  {
+    "objectID": "baza_danych.html#baza-danych",
+    "href": "baza_danych.html#baza-danych",
+    "title": "Baza Danych - SQL",
+    "section": "2 Baza danych",
+    "text": "2 Baza danych\n\nW ramach projektu moim celem było stworzenie relacyjnej bazy danych MySQL, która stanowi fundament całego systemu analizy i rekomendacji na rynku perfum. Baza danych pełni główną rolę – pozwala gromadzić, organizować i przetwarzać informacje zbierane zarówno ze stron internetowych, jak i z zewnętrznych źródeł danych poprzez API.\nBaza została zaprojektowana tak, aby umożliwić:\n\nanalizę trendów popularności perfum w czasie,\nśledzenie zależności pomiędzy ceną perfum a cechami produktów,\nintegrację wyników analizy danych i wizualizacji w R oraz python,\nprzygotowanie danych, które są łatwo dostępne do budowy modelu uczenia maszynowego w celu rekomendacji perfum oraz które umożliwiają korzystanie za pomocą sieci w czasie rzeczywistym.\n\nDzięki temu wszystkie dane zebrane w różnych źródłach, niezależnie od swojej kategorii i przeznaczenia są przechowywane w spójnej i uporządkowanej formie, co pozwala na szybkie i efektywne przetwarzanie informacji. Dodatkową zaletą takiego podejścia jest ułatwienie komunikacji na linii użytkownik - server, ponieważ stworzona aplikacja wymaga ciągłej interakcji z użytkownikiem, co przekłada się na zapotrzebowanie informacji zawartych w omawianej bazie danych. Dzięki temu mogę odwoływać się do informacji w prosty i łatwy sposób, dodatkowo korzystając z backendu i servera za pomocą node.js."
+  },
+  {
+    "objectID": "baza_danych.html#struktura",
+    "href": "baza_danych.html#struktura",
+    "title": "Baza Danych - SQL",
+    "section": "3 Struktura",
+    "text": "3 Struktura\n\nBazę MySQL, została stworzona w taki sposób, aby mieć pełną kontrolę podczas pracy z danymi i zapewnić ich przejrzystość i łatwość dostępu oraz modyfikacji. Takie podejście zapewnia:\n\ncentralne przechowywanie danych – wszystkie informacje są w jednym miejscu, ułatwiając zarządzanie,\nmożliwość wykonywania złożonych zapytań i modyfikacji – np. łączenie tabel lub filtrowanie danych według wielu kryteriów,\nskalowalność – baza może rosnąć w trakcie projektu, dodając nowe tabele i relacje, bez utraty funkcjonalności,\nbezpieczeństwo – można zarządzać użytkownikami i uprawnieniami do bazy, a także tworzyć kopie zapasowe danych,\nintegracja z aplikacją – dane są pobierane w czasie rzeczywistym, co pozwala na dynamiczne wyświetlanie informacji na stronie.\n\nBaza danych została zaprojektowana tak, aby jak najlepiej oraz jak najłatwiej rozwiązać problem projektu."
+  },
+  {
+    "objectID": "baza_danych.html#backend",
+    "href": "baza_danych.html#backend",
+    "title": "Baza Danych - SQL",
+    "section": "4 Backend",
+    "text": "4 Backend\n\nOmawiana baza danych nie jest jedynie statycznym magazynem informacji zapisanym na dysku – jest aktywnie używana w całym projekcie, jednocześnie umożliwiając dynamiczne korzystanie z niej. Do najważniejszych informacji związanych z funkcjonowaniem bazu oraz backend’u należą:\n\nPołączenie z bazą – backend strony łączy się z MySQL za pomocą node.js.\nZapytania SQL – w kodzie projektu wykorzystuję między innymi SELECT, INSERT, UPDATE oraz DELETE do modyfikowania danymi.\nBezpieczeństwo – korzystam z haseł i uprawnień dla użytkowników bazy, a także parametryzowanych zapytań, aby uniknąć ingerencji i zmian osób z zewnątrz."
+  },
+  {
+    "objectID": "baza_danych.html#wizualizacje",
+    "href": "baza_danych.html#wizualizacje",
+    "title": "Baza Danych - SQL",
+    "section": "5 Wizualizacje",
+    "text": "5 Wizualizacje"
+  },
+  {
+    "objectID": "baza_danych.html#przykłady-użytkowania",
+    "href": "baza_danych.html#przykłady-użytkowania",
+    "title": "Baza Danych - SQL",
+    "section": "5 Przykłady użytkowania",
+    "text": "5 Przykłady użytkowania"
+  },
+  {
+    "objectID": "baza_danych.html#podsumowanie",
+    "href": "baza_danych.html#podsumowanie",
+    "title": "Baza Danych - SQL",
+    "section": "6 Podsumowanie",
+    "text": "6 Podsumowanie"
   }
 ]

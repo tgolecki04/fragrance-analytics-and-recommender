@@ -6,7 +6,7 @@ language:
   search-text-placeholder: Szukaj
   
 website:
-  favicon: images/icons/icon1.png
+  favicon: images/icons/icon2.png
   back-to-top-navigation: true
   search:
     location: sidebar
@@ -25,14 +25,14 @@ website:
         href: aplikacja.qmd
         icon: code-slash
       - text: "SQL DATABASE"
-        href: aplikacja.qmd
-        icon: code-slash
+        href: baza_danych.qmd
+        icon: database
       - text: "KONTAKT"
         href: kontakt.qmd
         icon: people
       - text: "DATASET"
         href: "https://www.kaggle.com/datasets/olgagmiufana1/fragrantica-com-fragrance-dataset"
-        icon: database
+        icon: bar-chart
         
   sidebar:
     style: "docked"

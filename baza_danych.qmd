@@ -5,23 +5,88 @@ format: html
 editor: visual
 ---
 
-## Quarto
+## Wprowadzenie do MySQL oraz Workbench
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+![](images/article/database.png){style="float: right; margin: 10px;" width="256"}
 
-## Running Code
+**MySQL** jest jednym z najpopularniejszych systemów zarządzania relacyjnymi bazami danych (RDBMS). System ten pozwala przechowywać liczne informacje w tabelach, w kolumnach i wierszach, a następnie szybko je wyszukiwać, przetwarzać i dokonywać na nich operacji. MySQL jest bardzo wydajny, stabilny i darmowy w wersji Community, dlatego jest szeroko stosowany w projektach webowych oraz umożliwia tworzyć zaawansowane systemy baz danych od samego początku korzystania z niego.
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+**SQL (Structured Query Language)** to język używany do komunikacji z bazą danych. Dzięki SQL możemy:
 
-```{r}
-1 + 1
-```
+-   tworzyć i modyfikować tabele,
 
-You can add options to executable code like this
+-   wykonywać zapytania do bazy w celu pobrania potrzebnych danych,
 
-```{r}
-#| echo: false
-2 * 2
-```
+-   dodawać, aktualizować i usuwać rekordy,
 
-The `echo: false` option disables the printing of code (only output is displayed).
+-   łączyć dane z różnych tabel, generować raporty i przesyłać dane do dalszej pracy.
+
+**MySQL Workbench** to narzędzie typu GUI (graficzny interfejs użytkownika), które ułatwia pracę z MySQL. Dzięki niemu można:
+
+-   wizualnie projektować bazę danych, włącznie z jej podzespołami,
+
+-   pisać i uruchamiać zapytania SQL w edytorze,
+
+-   analizować strukturę i zależności w bazie za pomocą diagramów,
+
+-   zarządzać użytkownikami, uprawnieniami oraz bezpieczeństwem całej bazy danych.
+
+Workbech jest szczególnie przydatny dla osób, które chcą zacząć przygodę w systemach bazodanowych oraz nauczyć się zarządzania strukturą całej bazy bez konieczności pisania wielu komend SQL, używajać wbudowanych operacji i procedur.
+
+## Baza danych
+
+![](images/article/database2.png){style="float: right; margin: 10px;" width="229"}
+
+W ramach projektu moim celem było stworzenie relacyjnej bazy danych MySQL, która stanowi fundament całego systemu analizy i rekomendacji na rynku perfum. Baza danych pełni główną rolę – pozwala gromadzić, organizować i przetwarzać informacje zbierane zarówno ze stron internetowych, jak i z zewnętrznych źródeł danych poprzez API.
+
+Baza została zaprojektowana tak, aby umożliwić:
+
+-   analizę trendów popularności perfum w czasie,
+
+-   śledzenie zależności pomiędzy ceną perfum a cechami produktów,
+
+-   integrację wyników analizy danych i wizualizacji w `R` oraz `python`,
+
+-   przygotowanie danych, które są łatwo dostępne do budowy modelu uczenia maszynowego w celu rekomendacji perfum oraz które umożliwiają korzystanie za pomocą sieci w czasie rzeczywistym.
+
+Dzięki temu wszystkie dane zebrane w różnych źródłach, niezależnie od swojej kategorii i przeznaczenia są przechowywane w spójnej i uporządkowanej formie, co pozwala na szybkie i efektywne przetwarzanie informacji. Dodatkową zaletą takiego podejścia jest ułatwienie komunikacji na linii `użytkownik` - `server`, ponieważ stworzona aplikacja wymaga ciągłej interakcji z użytkownikiem, co przekłada się na zapotrzebowanie informacji zawartych w omawianej bazie danych. Dzięki temu mogę odwoływać się do informacji w prosty i łatwy sposób, dodatkowo korzystając z backendu i servera za pomocą `node.js`.
+
+## Struktura
+
+![](images/article/structure.png){style="float: right; margin: 10px;" width="293"}
+
+Bazę MySQL, została stworzona w taki sposób, aby mieć pełną kontrolę podczas pracy z danymi i zapewnić ich przejrzystość i łatwość dostępu oraz modyfikacji. Takie podejście zapewnia:
+
+-   centralne przechowywanie danych – wszystkie informacje są w jednym miejscu, ułatwiając zarządzanie,
+
+-   możliwość wykonywania złożonych zapytań i modyfikacji – np. łączenie tabel lub filtrowanie danych według wielu kryteriów,
+
+-   skalowalność – baza może rosnąć w trakcie projektu, dodając nowe tabele i relacje, bez utraty funkcjonalności,
+
+-   bezpieczeństwo – można zarządzać użytkownikami i uprawnieniami do bazy, a także tworzyć kopie zapasowe danych,
+
+-   integracja z aplikacją – dane są pobierane w czasie rzeczywistym, co pozwala na dynamiczne wyświetlanie informacji na stronie.
+
+Baza danych została zaprojektowana tak, aby jak najlepiej oraz jak najłatwiej rozwiązać problem projektu.
+
+## Backend
+
+![](images/article/server.png){style="float: right; margin: 10px;" width="178"}
+
+Omawiana baza danych nie jest jedynie statycznym magazynem informacji zapisanym na dysku – jest aktywnie używana w całym projekcie, jednocześnie umożliwiając dynamiczne korzystanie z niej. Do najważniejszych informacji związanych z funkcjonowaniem bazu oraz backend'u należą:
+
+1.  **Połączenie z bazą** – backend strony łączy się z MySQL za pomocą `node.js`.
+
+2.  **Zapytania SQL** – w kodzie projektu wykorzystuję między innymi `SELECT`, `INSERT`, `UPDATE` oraz `DELETE` do modyfikowania danymi.
+
+3.  **Bezpieczeństwo** – korzystam z haseł i uprawnień dla użytkowników bazy, a także parametryzowanych zapytań, aby uniknąć ingerencji i zmian osób z zewnątrz.
+
+## Przykłady użytkowania
+
+W tym rozdziale chcę przedstawić przykłady użytkowania bazy przy wykorzystaniu poleceń `SQL`. Pomoże to przedstawić najważniejsze operacje i modyfikacje jakich dokonałem podczas projektu. Każdy przykład zostanie zwizualizowany oraz opisany krok po kroku, tak aby w pełni oddać działanie omawianego kodu. Dzięki temu przedstawię dużą część projektu, która nie jest na pierwszy rzut oka widoczna, ale z perspektywy całego projektu - bardzo kluczowa.
+
+![](images/article/database_structure_workbench.png){fig-align="center"}
+
+## Podsumowanie
+
+Relacyjna baza danych MySQL pozwala na efektywne zarządzanie dużymi zbiorami danych, integrację różnych źródeł informacji oraz przygotowanie danych do dalszych analiz i rekomendacji. Dzięki dobrze zaprojektowanej strukturze możliwe jest tworzenie skomplikowanych zapytań, agregacja danych oraz wsparcie procesu rekomendacyjnego w aplikacji Fragrance Recommender.
